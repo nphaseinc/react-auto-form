@@ -313,7 +313,7 @@ function toValidHtmlId(value) {
   return value ? value.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase() : value || '';
 }
 
-var _excluded$e = ["direction", "withoutFormTag", "children", "className"];
+var _excluded$f = ["direction", "withoutFormTag", "children", "className"];
 var FormContext = React__default["default"].createContext({
   direction: 'horizontal'
 });
@@ -322,7 +322,7 @@ var Form = function Form(_ref) {
     withoutFormTag = _ref.withoutFormTag,
     children = _ref.children,
     className = _ref.className,
-    props = _objectWithoutPropertiesLoose(_ref, _excluded$e);
+    props = _objectWithoutPropertiesLoose(_ref, _excluded$f);
   return React__default["default"].createElement(FormContext.Provider, {
     value: {
       direction: direction || 'horizontal'
@@ -334,7 +334,7 @@ var Form = function Form(_ref) {
   }, props), children));
 };
 
-var _excluded$d = ["className", "direction"],
+var _excluded$e = ["className", "direction"],
   _excluded2$1 = ["validated", "isValid", "fieldId", "helperText", "helperTextInvalid", "isInline", "label", "labelHint", "isRequired", "className", "children", "fieldProps", "renderAfterField"];
 var FormGroupHelperText = function FormGroupHelperText(_ref) {
   var fieldId = _ref.fieldId,
@@ -349,7 +349,7 @@ var FormGroupHelperText = function FormGroupHelperText(_ref) {
 var AutoFormFormGroupBody = function AutoFormFormGroupBody(_ref2) {
   var className = _ref2.className,
     direction = _ref2.direction,
-    props = _objectWithoutPropertiesLoose(_ref2, _excluded$d);
+    props = _objectWithoutPropertiesLoose(_ref2, _excluded$e);
   return React__default["default"].createElement("div", _extends({}, props, {
     className: classNames__default["default"]('AutoForm_FormGroup', "AutoForm_FormGroup--" + direction, className)
   }));
@@ -517,12 +517,12 @@ var FormLegendComponent = function FormLegendComponent(props) {
   }));
 };
 
-var _excluded$c = ["value", "onChange"];
+var _excluded$d = ["value", "onChange"];
 var FormInputComponent = function FormInputComponent(props) {
   var _props$field = props.field,
     value = _props$field.value,
     onChange = _props$field.onChange,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$c);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$d);
   var id = toValidHtmlId(field.name);
   var handleChange = function handleChange(event) {
     if (props.onChangeCustom) {
@@ -572,11 +572,11 @@ var FormInputComponent = function FormInputComponent(props) {
   })));
 };
 
-var _excluded$b = ["value", "onChange"];
+var _excluded$c = ["value", "onChange"];
 var FormFilesComponent = function FormFilesComponent(props) {
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$b);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$c);
   var id = toValidHtmlId(field.name);
   var triggerChange = function triggerChange(file, filename) {
     try {
@@ -643,13 +643,13 @@ var FormFilesComponent = function FormFilesComponent(props) {
   }), React__namespace.createElement(icons.UploadOutlined, null), " ", !value && props.localization.fileUploadText)));
 };
 
-var _excluded$a = ["value", "onChange", "onBlur"];
+var _excluded$b = ["value", "onChange", "onBlur"];
 var FormMapsetComponent = function FormMapsetComponent(props) {
   var _useFormBuilder = useFormBuilder(),
     getField = _useFormBuilder.getField;
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$a);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$b);
   var mapsetValue = (typeof value === 'string' ? JSON.parse(value) : value) || {};
   var id = toValidHtmlId(field.name);
   var mapsetOptions = props.property.mapsetOptions || {};
@@ -689,13 +689,13 @@ var FormMapsetComponent = function FormMapsetComponent(props) {
   })))));
 };
 
-var _excluded$9 = ["onChange", "onBlur", "value"],
+var _excluded$a = ["onChange", "onBlur", "value"],
   _excluded2 = ["allowEmptyValue"];
 var FormSelectComponent = function FormSelectComponent(props) {
   var isMultiple = props.property.fieldAttributes && props.property.fieldAttributes.multiple;
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$9);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$a);
   var id = toValidHtmlId(field.name);
   var adjustValue = function adjustValue() {
     if (isMultiple) {
@@ -761,12 +761,12 @@ var FormSelectComponent = function FormSelectComponent(props) {
   })));
 };
 
-var _excluded$8 = ["value", "onChange"];
+var _excluded$9 = ["value", "onChange"];
 var FormTextAreaComponent = function FormTextAreaComponent(props) {
   var _props$field = props.field,
     value = _props$field.value,
     onChange = _props$field.onChange,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$8);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$9);
   var id = toValidHtmlId(field.name);
   var handleChange = function handleChange(event) {
     if (props.onChangeCustom) {
@@ -800,7 +800,7 @@ var FormTextAreaComponent = function FormTextAreaComponent(props) {
   })));
 };
 
-var _excluded$7 = ["onChange", "onBlur", "value"];
+var _excluded$8 = ["onChange", "onBlur", "value"];
 var FormTypeaheadComponent = function FormTypeaheadComponent(props) {
   var _useState = React.useState(''),
     name = _useState[0],
@@ -808,7 +808,7 @@ var FormTypeaheadComponent = function FormTypeaheadComponent(props) {
   var inputRef = React__namespace.useRef(null);
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$7);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$8);
   var id = toValidHtmlId(field.name);
   var handleChange = function handleChange(currentValue) {
     if (props.onChangeCustom) {
@@ -884,12 +884,12 @@ var FormTypeaheadComponent = function FormTypeaheadComponent(props) {
   })));
 };
 
-var _excluded$6 = ["value", "onChange"];
+var _excluded$7 = ["value", "onChange"];
 var FormCheckboxComponent = function FormCheckboxComponent(props) {
   var _props$field = props.field,
     value = _props$field.value,
     onChange = _props$field.onChange,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$6);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$7);
   var id = toValidHtmlId(field.name);
   var handleChange = function handleChange(event) {
     if (props.onChangeCustom) {
@@ -930,7 +930,7 @@ var FormHiddenComponent = function FormHiddenComponent(props) {
   }));
 };
 
-var _excluded$5 = ["value", "onChange"];
+var _excluded$6 = ["value", "onChange"];
 var durations = [{
   label: 'Milliseconds',
   value: 1
@@ -957,7 +957,7 @@ var FormDurationComponent = function FormDurationComponent(props) {
   var _props$property;
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$5);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$6);
   // find the highest duration that keeps the duration above 1
   var index = durations.findIndex(function (d) {
     return !(value / d.value >= 1.0);
@@ -1019,11 +1019,11 @@ var FormDurationComponent = function FormDurationComponent(props) {
   })));
 };
 
-var _excluded$4 = ["value", "onChange"];
+var _excluded$5 = ["value", "onChange"];
 var FormDateComponent = function FormDateComponent(props) {
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$4);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$5);
   var id = toValidHtmlId(field.name);
   var _getHelperText = getHelperText(props.field.name, props.property.description, props.form.errors),
     helperText = _getHelperText.helperText,
@@ -1054,11 +1054,11 @@ var FormDateComponent = function FormDateComponent(props) {
   })));
 };
 
-var _excluded$3 = ["value", "onChange"];
+var _excluded$4 = ["value", "onChange"];
 var FormSwitchComponent = function FormSwitchComponent(props) {
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$3);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$4);
   var id = toValidHtmlId(field.name);
   var _getHelperText = getHelperText(props.field.name, props.property.description, props.form.errors),
     helperText = _getHelperText.helperText,
@@ -1086,11 +1086,11 @@ var FormSwitchComponent = function FormSwitchComponent(props) {
   })));
 };
 
-var _excluded$2 = ["value", "onChange"];
+var _excluded$3 = ["value", "onChange"];
 var FormMultiSelectComponent = function FormMultiSelectComponent(props) {
   var _props$field = props.field,
     value = _props$field.value,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$2);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$3);
   var id = toValidHtmlId(field.name);
   var _getHelperText = getHelperText(props.field.name, props.property.description, props.form.errors),
     helperText = _getHelperText.helperText,
@@ -1121,10 +1121,10 @@ var FormMultiSelectComponent = function FormMultiSelectComponent(props) {
   })));
 };
 
-var _excluded$1 = ["value", "onChange"];
+var _excluded$2 = ["value", "onChange"];
 var FormCustomComponent = function FormCustomComponent(props) {
   var _props$field = props.field,
-    field = _objectWithoutPropertiesLoose(_props$field, _excluded$1);
+    field = _objectWithoutPropertiesLoose(_props$field, _excluded$2);
   var id = toValidHtmlId(field.name);
   var _getHelperText = getHelperText(props.field.name, props.property.description, props.form.errors),
     helperText = _getHelperText.helperText,
@@ -1391,7 +1391,7 @@ function useDefinitionCompiler(initDefinition, initialValue) {
   };
 }
 
-var _excluded = ["values", "touched", "dirty", "errors"];
+var _excluded$1 = ["values", "touched", "dirty", "errors"];
 var AutoForm = function AutoForm(props) {
   var _useFormBuilder = useFormBuilder(),
     getField = _useFormBuilder.getField,
@@ -1443,7 +1443,7 @@ var AutoForm = function AutoForm(props) {
     var values = _ref.values,
       dirty = _ref.dirty,
       errors = _ref.errors,
-      rest = _objectWithoutPropertiesLoose(_ref, _excluded);
+      rest = _objectWithoutPropertiesLoose(_ref, _excluded$1);
     var propertyComponents = propertiesArray.map(function (property) {
       var _ref2;
       var err = typeof errors === 'object' ? errors : (_ref2 = {}, _ref2[property.name] = errors, _ref2);
@@ -1486,6 +1486,203 @@ var AutoForm = function AutoForm(props) {
   }));
 };
 
+var _excluded = ["cols", "extendedProperties", "max", "min", "multiple", "rows", "controlHint", "controlTooltip", "labelHint", "labelTooltip", "autoComplete"];
+/**
+ * Maps an API map of ConfigurationProperty objects to
+ * an autoform IFormDefinition object.  Use on properties
+ * objects from backend responses to ensure they're mapped
+ * properly
+ *
+ * @param properties
+ */
+function toFormDefinition(properties) {
+  if (!properties) {
+    throw new Error('Undefined value passed to form definition converter');
+  }
+  var answer = {};
+  Object.keys(properties).forEach(function (key) {
+    answer[key] = toFormDefinitionProperty(properties[key]);
+  });
+  return answer;
+}
+/**
+ * Maps an API ConfigurationProperty object to an autoform IFormDefinitionPropertyObject
+ *
+ * @param property
+ */
+function toFormDefinitionProperty(property) {
+  var cols = property.cols,
+    extendedProperties = property.extendedProperties,
+    max = property.max,
+    min = property.min,
+    multiple = property.multiple,
+    rows = property.rows,
+    controlHint = property.controlHint,
+    controlTooltip = property.controlTooltip,
+    labelHint = property.labelHint,
+    labelTooltip = property.labelTooltip,
+    autoComplete = property.autoComplete,
+    formDefinitionProperty = _objectWithoutPropertiesLoose(property, _excluded); // needed, ConfigurationProperty is a lie
+  return _extends({}, formDefinitionProperty, (typeof extendedProperties === 'string' ? JSON.parse(extendedProperties) : extendedProperties) || {}, {
+    controlHint: controlHint || controlTooltip,
+    fieldAttributes: {
+      autoComplete: autoComplete,
+      cols: cols,
+      max: max,
+      min: min,
+      multiple: multiple,
+      rows: rows
+    },
+    labelHint: labelHint || labelTooltip,
+    relation: property.relation
+  });
+}
+function anyFieldsRequired(properties) {
+  return Object.keys(properties).filter(function (key) {
+    return requiredTypeMask(properties[key].type);
+  }).filter(function (key) {
+    return properties[key].required;
+  }).length > 0;
+}
+function requiredTypeMask(type) {
+  switch (type) {
+    case 'boolean':
+    case 'checkbox':
+    case 'hidden':
+      return false;
+    default:
+      return true;
+  }
+}
+function allFieldsRequired(properties) {
+  var keys = Object.keys(properties).filter(function (key) {
+    return requiredTypeMask(properties[key].type);
+  });
+  var allRequired = keys.filter(function (key) {
+    return properties[key].required;
+  });
+  if (allRequired.length === 0) {
+    return false;
+  }
+  return keys.length === allRequired.length;
+}
+function getRequiredStatusText(properties, allRequired, someRequired, noneRequired) {
+  if (allFieldsRequired(properties)) {
+    return allRequired;
+  }
+  if (anyFieldsRequired(properties)) {
+    return someRequired;
+  }
+  return noneRequired;
+}
+/**
+ * Evaluates the values according to the given property definition and returns
+ * a boolean if the supplied values are valid or not.
+ *
+ * @param properties
+ * @param values
+ */
+function validateConfiguredProperties(properties, values) {
+  if (typeof values === 'undefined') {
+    return false;
+  }
+  var allRequired = Object.keys(properties).filter(function (key) {
+    return properties[key].required;
+  });
+  if (allRequired.length === 0) {
+    return true;
+  }
+  var allRequiredSet = allRequired.map(function (key) {
+    return validateRequired(values[key]);
+  }).reduce(function (prev, curr) {
+    return curr;
+  }, false);
+  return allRequiredSet;
+}
+/**
+ * Examine the given property and determine if it's set or not,
+ * for string values this includes evaluating against ''
+ *
+ * @param value
+ */
+function validateRequired(value) {
+  if (typeof value === 'undefined') {
+    return false;
+  }
+  if (typeof value === 'string') {
+    return value !== '';
+  }
+  if (Array.isArray(value) && value.length === 0) {
+    return false;
+  }
+  return true;
+}
+/**
+ * Evaluates the given values against the supplied property definition
+ * object and returns an IFormErrors map that can be returned to auto-form
+ *
+ * @param definition
+ * @param getErrorString
+ * @param values
+ */
+function validateRequiredProperties(definition, getErrorString, values, prefix) {
+  if (prefix === void 0) {
+    prefix = '';
+  }
+  var allRequired = Object.keys(definition).filter(function (key) {
+    return requiredTypeMask(definition[key].type);
+  }).filter(function (key) {
+    return definition[key].required;
+  });
+  if (allRequired.length === 0) {
+    return {};
+  }
+  var sanitizedValues = values || {};
+  var validationResults = allRequired.map(function (key) {
+    return {
+      key: key,
+      defined: validateRequired(sanitizedValues[key])
+    };
+  }).reduce(function (acc, current) {
+    if (!current.defined) {
+      acc["" + prefix + current.key] = getErrorString(definition[current.key].displayName || current.key);
+    }
+    return acc;
+  }, {});
+  var arrayValidationResults = allRequired.filter(function (key) {
+    return definition[key].type === 'array';
+  }).reduce(function (acc, current) {
+    var arrayValue = sanitizedValues[current] || [];
+    var arrayDefinition = definition[current].arrayDefinition;
+    var result = arrayValue.map(function (value, index) {
+      return validateRequiredProperties(arrayDefinition, getErrorString, value, current + "[" + index + "].");
+    }).reduce(function (accInner, currentInner) {
+      return _extends({}, accInner, currentInner);
+    }, {});
+    return _extends({}, acc, result);
+  }, {});
+  return _extends({}, validationResults, arrayValidationResults);
+}
+/**
+ * Stringifies non-complex types in a property map
+ *
+ * @param values
+ */
+function coerceFormValues(values) {
+  var updated = {};
+  Object.keys(values).forEach(function (key) {
+    updated[key] = typeof values[key] === 'object' ? JSON.stringify(values[key]) : values[key];
+  });
+  return updated;
+}
+var getAutocompleteAttr = function getAutocompleteAttr(_ref) {
+  var secret = _ref.secret;
+  if (secret === true) {
+    return 'new-password';
+  }
+  return undefined;
+};
+
 var getLabeledValues = function getLabeledValues(definition, initialValue) {
   return Object.keys(definition).reduce(function (acc, key) {
     acc[key] = definition[key];
@@ -1523,12 +1720,17 @@ exports.FormSelectComponent = FormSelectComponent;
 exports.FormSwitchComponent = FormSwitchComponent;
 exports.FormTextAreaComponent = FormTextAreaComponent;
 exports.FormTypeaheadComponent = FormTypeaheadComponent;
+exports.allFieldsRequired = allFieldsRequired;
+exports.anyFieldsRequired = anyFieldsRequired;
 exports.check = check;
+exports.coerceFormValues = coerceFormValues;
 exports.enrichAndOrderProperties = enrichAndOrderProperties;
+exports.getAutocompleteAttr = getAutocompleteAttr;
 exports.getErrorText = getErrorText;
 exports.getHelperText = getHelperText;
 exports.getNewArrayRow = getNewArrayRow;
 exports.getNewArrayRows = getNewArrayRows;
+exports.getRequiredStatusText = getRequiredStatusText;
 exports.getValidationState = getValidationState;
 exports.massageRequired = massageRequired;
 exports.massageType = massageType;
@@ -1536,6 +1738,10 @@ exports.massageValue = massageValue;
 exports.renderFileName = renderFileName;
 exports.sanitizeInitialArrayValue = sanitizeInitialArrayValue;
 exports.sanitizeValues = sanitizeValues;
+exports.toFormDefinition = toFormDefinition;
+exports.toFormDefinitionProperty = toFormDefinitionProperty;
 exports.toValidHtmlId = toValidHtmlId;
 exports.useDefinitionLabledValues = useDefinitionLabledValues;
+exports.validateConfiguredProperties = validateConfiguredProperties;
+exports.validateRequiredProperties = validateRequiredProperties;
 //# sourceMappingURL=auto-form.js.map
