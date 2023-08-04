@@ -1,0 +1,37 @@
+.AutoForm_FormArray-listItem.ant-list-item {
+  flex-direction: column;
+  align-items: stretch;
+  padding-left: 0;
+  padding-right: 0;
+  border-color: #ececec;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+}
+.AutoForm_FormArray-listItem.ant-list-item:first-child {
+  border-top: 1px solid #ececec;
+}
+.AutoForm_FormArray-listItem.ant-list-item:last-child {
+  border-bottom: 1px solid #ececec;
+}
+.AutoForm_FormArray-listItem:last-child {
+  margin-bottom: 24px;
+}
+
+.AutoForm_FormArray-fields
+  > .AutoForm_FormGroup
+  > .AutoForm_FormGroup-formLabel {
+  padding-left: 16px;
+}
+
+.AutoForm_FormArray-fields > .AutoForm_FormGroup > .AutoForm_FormGroup-content {
+  padding-right: 16px;
+}
+
+.AutoForm_FormArray-listItem-header {
+  padding: 0 16px;
+  justify-content: space-between;
+}
+
+.AutoForm_FormArray-divider {
+  margin: 16px 0;
+}

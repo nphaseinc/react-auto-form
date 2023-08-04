@@ -1,0 +1,60 @@
+.AutoForm_FormGroup {
+  margin-bottom: 24px;
+}
+.AutoForm_FormGroup:last-child {
+  margin-bottom: 0;
+}
+
+.AutoForm_FormGroup--horizontal {
+  display: grid;
+  grid-template-columns: minmax(150px, 33%) 1fr;
+}
+
+.AutoForm_FormGroup--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.AutoForm_FormGroup-content {
+  grid-column-start: 2;
+  display: flex;
+  min-width: 0;
+}
+
+.AutoForm_FormGroup--disableMargin {
+  margin-bottom: 0;
+}
+
+.AutoForm_FormGroup-helperText {
+  grid-column-start: 2;
+  font-size: 0.8rem;
+  min-height: 24px;
+}
+
+.AutoForm_FormGroup-helperText--success {
+  color: #92d400;
+}
+
+.AutoForm_FormGroup-helperText--error {
+  color: #c9190b;
+}
+
+.AutoForm_FormGroup-formLabel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.AutoForm_FormGroup-formLabel > span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+}
+
+.AutoForm_FormGroup-formLabel__text {
+  font-weight: bold;
+}
+
+.AutoForm_FormGroup-formLabel__required {
+  color: #c9190b;
+}

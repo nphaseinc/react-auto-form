@@ -1,0 +1,25 @@
+# dependencies
+node_modules
+node
+
+# testing
+coverage
+
+# misc
+.DS_Store
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.idea
+.cache
+.rts2_cache*
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

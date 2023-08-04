@@ -1,0 +1,155 @@
+.AutoForm_Form {
+  display: grid;
+}
+
+.AutoForm_Form > .ant-alert {
+  margin-bottom: 24px;
+}
+
+.AutoForm_FormGroup {
+  margin-bottom: 24px;
+}
+.AutoForm_FormGroup:last-child {
+  margin-bottom: 0;
+}
+
+.AutoForm_FormGroup--horizontal {
+  display: grid;
+  grid-template-columns: minmax(150px, 33%) 1fr;
+}
+
+.AutoForm_FormGroup--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.AutoForm_FormGroup-content {
+  grid-column-start: 2;
+  display: flex;
+  min-width: 0;
+}
+
+.AutoForm_FormGroup--disableMargin {
+  margin-bottom: 0;
+}
+
+.AutoForm_FormGroup-helperText {
+  grid-column-start: 2;
+  font-size: 0.8rem;
+  min-height: 24px;
+}
+
+.AutoForm_FormGroup-helperText--success {
+  color: #92d400;
+}
+
+.AutoForm_FormGroup-helperText--error {
+  color: #c9190b;
+}
+
+.AutoForm_FormGroup-formLabel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.AutoForm_FormGroup-formLabel > span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+}
+
+.AutoForm_FormGroup-formLabel__text {
+  font-weight: bold;
+}
+
+.AutoForm_FormGroup-formLabel__required {
+  color: #c9190b;
+}
+
+.AutoForm_FormArray-listItem.ant-list-item {
+  flex-direction: column;
+  align-items: stretch;
+  padding-left: 0;
+  padding-right: 0;
+  border-color: #ececec;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+}
+.AutoForm_FormArray-listItem.ant-list-item:first-child {
+  border-top: 1px solid #ececec;
+}
+.AutoForm_FormArray-listItem.ant-list-item:last-child {
+  border-bottom: 1px solid #ececec;
+}
+.AutoForm_FormArray-listItem:last-child {
+  margin-bottom: 24px;
+}
+
+.AutoForm_FormArray-fields
+  > .AutoForm_FormGroup
+  > .AutoForm_FormGroup-formLabel {
+  padding-left: 16px;
+}
+
+.AutoForm_FormArray-fields > .AutoForm_FormGroup > .AutoForm_FormGroup-content {
+  padding-right: 16px;
+}
+
+.AutoForm_FormArray-listItem-header {
+  padding: 0 16px;
+  justify-content: space-between;
+}
+
+.AutoForm_FormArray-divider {
+  margin: 16px 0;
+}
+
+.AutoForm_FormFilesComponent > span {
+  width: 100%;
+}
+.AutoForm_FormFilesComponent--withValue > span {
+  width: 20%;
+}
+.AutoForm_FormFilesComponent--withValue .AutoForm_FormFilesComponent-dragger {
+  border-bottom-style: solid;
+}
+
+.AutoForm_FormFilesComponent-dragger.ant-upload:not(.ant-upload-disabled):focus-within {
+  border-color: #40a9ff;
+}
+
+.AutoForm_FormFilesComponent-input.ant-input {
+  width: calc(100% - 20% - 48px);
+  cursor: auto;
+  background: #fafafa;
+}
+
+.AutoForm_FormFilesComponent-button {
+  width: 48px;
+}
+.AutoForm_FormFilesComponent-button:hover,
+.AutoForm_FormFilesComponent-button:focus {
+  z-index: 2;
+}
+
+.AutoForm_FormFilesComponent-dragger.ant-upload {
+  height: 32px;
+}
+.AutoForm_FormFilesComponent-dragger.ant-upload .ant-upload-btn {
+  padding: 0 11px;
+}
+
+.AutoForm_FormMapset-collapse--error {
+  border-color: #ff4d4f;
+}
+
+.AutoForm_FormMapset-collapse--error > .ant-collapse-item {
+  border-color: #ff4d4f;
+}
+
+.AutoForm_field--fullWidth {
+  width: 100%;
+}
+
+/*# sourceMappingURL=auto-form.css.map */

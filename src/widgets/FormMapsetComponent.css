@@ -1,0 +1,7 @@
+.AutoForm_FormMapset-collapse--error {
+  border-color: #ff4d4f;
+}
+
+.AutoForm_FormMapset-collapse--error > .ant-collapse-item {
+  border-color: #ff4d4f;
+}

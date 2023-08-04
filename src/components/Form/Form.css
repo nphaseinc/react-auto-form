@@ -1,0 +1,7 @@
+.AutoForm_Form {
+  display: grid;
+}
+
+.AutoForm_Form > .ant-alert {
+  margin-bottom: 24px;
+}

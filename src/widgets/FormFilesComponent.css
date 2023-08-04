@@ -1,0 +1,34 @@
+.AutoForm_FormFilesComponent > span {
+  width: 100%;
+}
+.AutoForm_FormFilesComponent--withValue > span {
+  width: 20%;
+}
+.AutoForm_FormFilesComponent--withValue .AutoForm_FormFilesComponent-dragger {
+  border-bottom-style: solid;
+}
+
+.AutoForm_FormFilesComponent-dragger.ant-upload:not(.ant-upload-disabled):focus-within {
+  border-color: #40a9ff;
+}
+
+.AutoForm_FormFilesComponent-input.ant-input {
+  width: calc(100% - 20% - 48px);
+  cursor: auto;
+  background: #fafafa;
+}
+
+.AutoForm_FormFilesComponent-button {
+  width: 48px;
+}
+.AutoForm_FormFilesComponent-button:hover,
+.AutoForm_FormFilesComponent-button:focus {
+  z-index: 2;
+}
+
+.AutoForm_FormFilesComponent-dragger.ant-upload {
+  height: 32px;
+}
+.AutoForm_FormFilesComponent-dragger.ant-upload .ant-upload-btn {
+  padding: 0 11px;
+}
