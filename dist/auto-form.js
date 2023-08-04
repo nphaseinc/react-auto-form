@@ -1438,7 +1438,8 @@ var AutoForm = function AutoForm(props) {
     validate: validate,
     enableReinitialize: props.enableReinitialize,
     validateOnBlur: props.validateOnBlur,
-    validateOnChange: props.validateOnChange
+    validateOnChange: props.validateOnChange,
+    innerRef: props.innerRef
   }, function (_ref) {
     var values = _ref.values,
       dirty = _ref.dirty,

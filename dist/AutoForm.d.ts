@@ -59,6 +59,7 @@ export interface IAutoFormProps<Values> {
     renderCustomField?: IFormControlProps['renderCustomField'];
     renderAfterField?: AutoFormRenderAfterField;
     localization?: IAutoFormLocalization;
+    innerRef?: React.RefObject<any>;
 }
 export interface IAutoFormChildrenProps<Values> {
     /**

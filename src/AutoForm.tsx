@@ -85,6 +85,7 @@ export interface IAutoFormProps<Values> {
   renderCustomField?: IFormControlProps['renderCustomField'];
   renderAfterField?: AutoFormRenderAfterField;
   localization?: IAutoFormLocalization;
+  innerRef?: React.RefObject<any>;
 }
 
 export interface IAutoFormChildrenProps<Values> {
@@ -163,6 +164,7 @@ export const AutoForm = <Values extends FormikValues>(
         enableReinitialize={props.enableReinitialize}
         validateOnBlur={props.validateOnBlur}
         validateOnChange={props.validateOnChange}
+        innerRef={props.innerRef}
       >
         {({ values, touched, dirty, errors, ...rest }) => {
           const propertyComponents = propertiesArray.map(property => {
